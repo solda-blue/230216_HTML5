@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        p { color:red }
+        #text-color { color: chocolate; }
+        .text-color { color: cadetblue; }
+    </style>
+    <script src="../js/script.js"></script>
+    <title>HTML 확장</title>
+</head>
+<body>
+    <div class="contatiner">
+
+        <div>
+            <h2>CSS</h2>
+            <p style="color: blue;">인라인 스타일 적용</p>
+            <p>내부 스타일 시트 적용</p>
+            <p>모든 p태그는 내부스타일 시트 적용</p>
+            <span>아무것도 적용되지 않은 상태 : 웹브라우저의 기본 스타일</span>
+            <span id="text-color">id를 이용한 스타일적용</span>
+            <spane class="text-color">클래스를 이용한 스타일 적용</spane>
+        </div>
+
+    </div>
+
+    <div>
+        <button onclick="handleOpenExtend()">내부 js 실행</button>
+    </div>
+
+</body>
+
+<p>
+    body 밖에서는 사용할 수 없지만 웹 브라우저에서 임의로 body안으로 옮겨서 출력해 준다 <br />
+    끝태그가 없을 때도 임의로 생성해준다
+</p>
+
+</html>

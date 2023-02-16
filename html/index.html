@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/index.css" rel="stylesheet" />
+    <script type="text/JavaScript" src="../js/script.js"></script>
+    <title>프론트 react과정 (230206)</title>
+</head>
+<body>
+    <div class="container">
+
+        <div  style="width:200px; display: inline-block;">
+
+
+            <div class="header">
+
+                <div id="main" onclick="handleClick(id)" class="logo" style="height: 40px;">
+                    <div style="display: inline-block;">
+                        <div style="display: table-cell; vertical-align: middle; line-height: 30px;">
+                            <img src="../img/react_original.svg" style="width: 30px;" />
+
+                        </div>
+                    </div>
+
+                    <div style="display: inline-block;">
+                        <div style="display: table-cell; vertical-align: middle; line-height: 40px;">
+                            Frontend React
+                        </div>
+                    </div>
+                </div>
+
+                <div id="btnHtml" class="menu">
+                    &nbsp; HTML
+                </div>
+
+                <div id="menuHtml" class="sub-menu-html">
+                    
+                    <button id="htmlText" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 텍스트 요소</button> <br/>
+
+                    <button id="htmlTextPractice" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 텍스트 실습</button> <br/>
+
+                    <button id="htmlElement" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 기본 요소</button> <br/>
+
+                    <button id="htmlElementPractice" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 기본요소 실습</button> <br/>
+
+                    <button id="htmlSpace" class= "doc-btn"
+                         onclick="handleClick(id)">HTML 공간분할</button> <br/>
+
+                    <button id="htmlSpacePractice" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 공간분할 실습</button> <br/>
+
+                    <button id="htmlInput" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 입력양식</button> <br/>
+
+                    <button id="htmlInputPractice" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 입력양식 실습</button> <br/>
+
+                    <button id="htmlReview1" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 1차복습</button> <br/>
+
+                    <button id="htmlExtend" class= "doc-btn"
+                        onclick="handleClick(id)">HTML 확장</button> <br/>
+
+                    <button id="htmlSemantic" class= "doc-btn"
+                        onclick="handleClick(id)">HTML5 의미태그</button> <br/>
+
+                    <button id="html5AddInput" class= "doc-btn"
+                        onclick="handleClick(id)">HTML5 추가input 요소</button> <br/>
+
+                    <button id="html5AddInputPractice" class= "doc-btn"
+                        onclick="handleClick(id)">HTML5 추가input 요소 실습</button> <br/>
+
+                    <button id="htmlMedia" class= "doc-btn"
+                        onclick="handleClick(id)">HTML5 멀티미디어</button> <br/>
+
+                    <button id="htmlMedia" class= "doc-btn"
+                        onclick="handleClick(id)">HTML5 멀티미디어 실습</button> <br/>
+
+                    <button id="htmlGraphic" class= "doc-btn"
+                        onclick="handleClick(id)">HTML5 그래픽</button> <br/>
+
+                    <button id="article" class= "doc-btn"
+                        onclick="handleClick(id)">종합실습 1</button> <br/>
+                    
+                </div>
+
+                <div id="btnTest" class="menu">
+                    &nbsp; 테스트
+                </div>
+
+
+                <div id="menuTest" class="sub-menu-test">
+
+                    <button id="test" class="doc-btn"
+                        onclick="handleClick(id)">테스트</button> <br />
+
+                    <button id="appLotto" class="doc-btn"
+                    onclick="handleClick(id)">로또번호 생성기</button>
+
+                </div>
+
+            </div>
+  
+            
+        </div>
+        
+        <div id="content" class="content" style="display: inline-block;">
+
+        </div>
+
+    </div>
+
+    <script>
+        const content = document.getElementById("content");
+
+        const menuHtml = document.getElementById("menuHtml");
+        const menuTest = document.getElementById("menuTest");
+
+        const btnHtml = document.getElementById("btnHtml");
+        const btnTest = document.getElementById("btnTest");
+
+        btnHtml.addEventListener('click', function() {
+            menuHtml.classList.toggle('toggle');
+            console.log(menuHtml.classList);
+        });
+
+        btnTest.addEventListener('click', function() {
+            menuTest.classList.toggle('toggle');
+            console.log(menuTest.classList)
+        });
+
+        function handleHtml () {
+            menuHtml.style.display = "block";
+        };
+
+        function handleHide () {
+            menuHtml.style.display = "none";
+            menuTest.style.display = "none";
+        };
+
+        let request = new XMLHttpRequest();
+
+        window.onload = function () {
+            request.open("GET", 'main.html', true);
+            request.send();
+            request.onreadystatechange = function() {
+                if( request.readyState === 4 && request.status === 200) {
+                    content.innerHTML = request.responseText;
+                };
+            };
+        }
+        
+        function handleClick (url) {
+            console.log(url);
+            request.open("GET", url + '.html', true);
+            request.send();
+            request.onreadystatechange = function() {
+                if( request.readyState === 4 && request.status === 200) {
+                    content.innerHTML = request.responseText;
+                };
+            };
+        };
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합실습 1</title>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div>
+            <h1>기사제목입니다</h1>
+
+            <div style="margin-left: 30px;" >
+                <img src="../img/react_original.svg" type="svg" height="100" width="auto" />
+                <!-- <p>위의 이미지는 <a href="https://pixabay.com/ko/" target="_blank">픽사베이</a>에서 제공받았습니다.</p> -->
+                <figcaption>위 이미지는 <a href="https://pixabay.com/ko/">픽사베이</a>에서 제공받았습니다.</figcaption>
+                <figcaption>
+                    웹사이트에서 이미지의 '새탭으로 이미지 열기' 를 통해서 주소를 가져와서 화면에 출력할 수 있다
+                </figcaption>
+
+            </div>
+            <p>
+                기사내용입니다 <br />
+                원하는 기사를 넣으셔도 됩니다. <br /><br />
+                <i>작성자 홍길동</i>
+            </p>
+            <hr />
+        </div>
+
+        
+        <div>
+            <p>이 기사에 대한 평가를 주세요</p>
+            <br />
+
+            <input type="radio" name="like" /> <label>🙂좋아요</label> &nbsp;
+            <input type="radio" name="like" /> <label>😢슬퍼요</label> &nbsp;
+            <input type="radio" name="like" /> <label>😠화나요</label> &nbsp;
+
+            <br />
+            <br />
+
+            <p>격려의 메시지와 후원을 받고 있습니다</p>
+
+            <form>
+
+                <div>
+                    <label>닉네임 </label> <input type="text" />
+                    <label>비밀번호 </label> <input type="password" />
+                </div>
+
+                <div>
+                    <textarea placeholder="메시지를 남겨주세요" rows="3" style="width:100%;"></textarea>
+                </div>
+
+                <label>후원금 </label> <input type="number" min="0" step="1000" value="0" />
+                <br />
+
+                <p><ins>1000원</ins>단위로 올라갑니다. 원하는 금액을 입력해주세요</p>
+
+                <input type="submit" value="제출" />
+
+            </form>
+
+        </div>
+
+        <hr />
+        <p>회사소개 | 인재채용 | 제휴제안 | 개인정보처리방침 | &copy;뉴스</p>
+
+    </div>
+    
+</body>
+</html>

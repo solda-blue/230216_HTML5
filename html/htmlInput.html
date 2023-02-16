@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/index.css" rel="stylesheet" />
+    <title>HTML 입력양식</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div>
+            <h1>form을 이용한 입력양식</h1>
+            <h2>input의 type</h2>
+
+            <h3>텍스트</h3>
+
+            <div style="margin-bottom: 10px;">
+                <label>한줄메모</label>
+                <input type="text" value="Hello"/>
+            </div>
+
+            <div>
+                <label>비밀번호</label>
+                <input type="password" />
+            </div>
+
+            <p>
+                input 태그는 inline속성이다
+            </p>
+
+            <div>
+                <h3>라디오 버튼</h3>
+
+                <div>
+                    <label>오늘의 점심</label> <br />
+
+                    <input type="radio" name="food" value="한식"/> 한식
+                    <input type="radio" name="food" value="중식"/> 중식
+                    <input type="radio" name="food" value="양식"/> 양식
+
+                </div>
+                
+                <p>
+                    radio 타입의 경우 name을 통해서 그룹으로 묶여진다 <br />
+                    그룸으로 묶여졌을 경우 그룹 중에 하나만 선택 할 수 있다 <br />
+                    input 태그의 value 속성은 서버로 보낼 값이 된다 <br />
+                    text나 password처럼 값을 입력받는 경우가 아니라면 미리적어둔다
+                </p>
+
+            </div>
+
+            <div>
+                <h3>체크박스</h3>
+
+                <div>
+                    <label>컴퓨터 언어</label> <br />
+
+                    <input type="checkbox" name="language" value="HTML" checked /> HTML
+                    <input type="checkbox" name="language" value="CSS" /> CSS
+                    <input type="checkbox" name="language" value="JavaScript" disabled /> JavaScript
+                    
+                </div>
+
+                <p>
+                    체크박스는 여러개를 선택할 때 사용할 수 있는 type이다 <br />
+                    checked, disabled 체크박스의 상태를 지정할 수 있다 <br />
+                    라디오 버튼도 동일하게 적용
+                </p>
+
+            </div>
+
+            <div>
+                <h3>파일선택</h3>
+                <input type="file" accept="image/*" />
+            </div>
+
+            <div>
+                <h3>select선택</h3>
+
+                <select name="fluit">
+                    <option value="apple">사과</option>
+                    <option value="orange">오렌지</option>
+                    <option value="grape">포도</option>
+                </select>
+
+            </div>
+
+            <div>
+                <h3>textarea</h3>
+
+                <div>
+                    <textarea cols="30" rows="10" ></textarea>
+                </div>
+
+            </div>
+
+            <div>
+                <h3>button</h3>
+
+                <div>
+                    <button onclick="alert('버튼을 클릭하셨군요')"> 버튼을 눌러주세요</button>
+                </div>
+
+            </div>
+
+            <div>
+                <h3>form을 통한 입력값 전달 -submit</h3>
+
+                <form action="" method="get">
+                    <input type="text" name="nickname" />
+                    <input type="submit" value="전송" />
+                    <button type="submit">버튼으로 전송</button>
+                </form>
+
+                <p>
+                    작성한 입력값은 name=value 형태로 전달이 되어진다 <br />
+                    갑을 전달할 때는 form을 통해서 전달 <br />
+                    form안에 있는 submit 타입의 태그를 통해 전달이 된다 <br />
+                    get : 주소로 값을 전달, post 따로 값을 전달
+                </p>
+            </div>
+
+            <div>
+
+                <form action="">
+
+                    <fieldset>
+                        <legend>입력양식</legend>
+                        
+                        <label>이름</label>
+                        <input type="text" name="username" /> <br />
+                        
+                        <label>이메일</label>
+                        <input type="text" name="email"> <br /><br />
+                        
+                        <input type="submit" value="전송" />
+                        
+                    </fieldset>
+
+                </form>
+
+            </div>
+
+            <div>
+                <h3>input의 text type 속성확인</h3>
+                <input type="text" value="초기값" maxlength="10" id="max" /> 
+                <p id="display"></p>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

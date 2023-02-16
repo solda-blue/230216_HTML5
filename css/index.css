@@ -1,0 +1,81 @@
+.container {
+    padding-bottom: 120px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.main-content {
+    background: url();
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 260px;
+    width: 60%;
+}
+
+.exam1 {
+    background-color: ivory;
+}
+
+.header {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+}
+
+.menu {
+    font-size: 1.2em;
+    background-color: lightblue;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.sub-menu-html {
+    display: block;
+    background-color: white;
+}
+
+.toggle.sub-menu-html {
+    display: none;
+}
+
+.sub-menu-test {
+    display: block;
+    background-color: white;
+}
+
+.toggle.sub-menu-test {
+    display: none;
+}
+
+.doc-btn {
+    border:0;
+    margin: 5px;
+    background: none;
+}
+
+.doc-btn:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.damn-label {
+    width: 120px;
+}
+
+.textarea {
+    width: 100%;
+    resize: none;
+}
+
+.footer {
+
+}

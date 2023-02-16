@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        label {
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+        }
+        .input-dlc {
+            margin: 10px;
+        }
+    </style>
+    <title>HTML5 추가input 요소</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>input요소</h1>
+
+        <div>
+            <h3>datalist</h3>
+
+            <input list="browsers" />
+
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Safari"></option>
+            </datalist>
+            <p>
+                datalist는 input의 값 중에 몇개를 리스트로 띄워주는 역할 <br />
+                input태그와 datalist태그는 list와 id로 연결
+            </p>
+
+        </div>
+
+        <div>
+            <h3>keygen</h3>
+
+            <keygen></keygen>
+            <p>
+                keygen은 지금은 지원하지 않는 태그 <br />
+                웹의 발전에 따라서 태그들이 생성되거나 쓰지 않는다
+            </p>
+
+        </div>
+
+        <div>
+            <h3>output</h3>
+
+            <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="text" id="a" name="a" size="5" /> +
+                <input type="text" id="b" name="b" size="5" /> =
+                <output name="result" for="a b"></output>
+            </form>
+
+            <p>
+                ouput 태그는 form의 oninput 속성과 함께 사용한다 <br />
+                oninput에 들어간 자바스크립트의 명령어를 계산해서 쓸 수 있다 <br />
+                보통은 자바스크립트를 script 태그 안에서 사용한다
+            </p>
+
+        </div>
+
+        <div>
+            <h3>input 추가타입</h3>
+            
+            <div class="input-dlc">
+                <label>number</label>
+                <input type="number" step="10" value="0" min="0" max="100"/>
+
+                <!-- 모르는 / 처음보는 속성이 있을 때 그 태그를 mdn에 검색해서내용을 확인할 수 있다
+                사이트를 검색해서 들어갈 수도 있지만 태그에 마우스를 올려서 들어갈 수도 있다 -->
+            </div>
+
+            <div class="input-dlc">
+                <label>range : 범위</label>
+                <input list="markers" type="range" min="0" max="10" />
+                <datalist id="markers">
+                    <option value="0"></option>
+                    <option value="5"></option>
+                    <option value="10"></option>
+                </datalist>
+                    <!-- range 타입은 값을 슬라이더를 통해서 선택
+                    값은 자바스크립트를 통해서 가져오거나
+                    form을 통해서 값을 전달할 때 알 수 있다 -->
+
+            </div>
+
+            <div class="input-dlc">
+                <label>color</label>
+                <input type="color" value="#f6b73c" />
+            </div>
+
+            <div class="input-dlc">
+                <label>date : 날짜입력</label>
+                <input type="date" value="2023-03-10" min="2023-02-13" />
+            </div>
+
+            <div class="input-dlc">
+                <label>time</label>
+                <input type="time" value="23:00" />
+            </div>
+
+            <div class="input-dlc">
+                <label>datetime-local</label>
+                <input type="datetime-local" value="2023-02-13 23:00" />
+            </div>
+
+            <div class="input-dlc">
+                <label>month</label>
+                <input type="month" value="2023-03" />
+            </div>
+
+            <div class="input-dlc">
+                <label>week</label>
+                <input type="week" value="2023-W10" />
+            </div>
+
+            <div class="input-dlc">
+                <form autocomplete="on" novalidate>
+                    <label>email</label>
+                    <input type="email" name="email" placeholder="aaa@naver.com" />
+                    <input type="submit" value="제출" />
+                    <!-- <p>
+                        email의 경우는 이메일의 형태를 갖추고 있는지 유효성검사를 해준다 (validation)
+                        form에 novalidate 속성이 들어가게 되면 유효성 검사를 하지않는다
+                    </p> -->
+                </form>
+            </div>
+
+            <div class="input-dlc">
+                <form>
+                    <label>URL</label>
+                    <input type="url" placeholder="https://www.naver.com" />
+                    <input type="submit" value="제출" />
+                </form>
+            </div>
+
+            <div class="input-dlc">
+                <form>
+                    <label>tel</label>
+                    <input type="tel" />
+                </form>
+            </div>
+
+            <div class="input-dlc">
+                <form>
+                    <label>search</label>
+                    <input type="search" />
+                </form>
+            </div>
+
+        </div>
+
+        <div>
+            <h3>input 요소의 속성</h3>
+
+            <form>
+                <input type="text"
+                autofocus
+                placeholder="이름을 적어주세요"
+                required />
+                <input type="submit" value="제출" />
+            </form>
+            <p>
+                required는 값이 없을 때 서버로 보내는 것을 막는 속성이다
+            </p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

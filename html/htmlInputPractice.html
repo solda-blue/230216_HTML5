@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/index.css" rel="stylesheet" />
+    <style type="text/css" title="">
+        label, input {
+          display:inline-block;
+        }
+    </style>
+    <title>HTML 입력양식 실습</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div>
+            <h1>HTML 입력 양식 실습 1</h1>
+            <p>&lt;form&gt;과 &lt;table&gt;이용해서, 간단한 로그인 페이지를 만드세요 (기능은 구현하지 앖습니다)</p>
+
+            <div>
+                <h1>로그인 페이지 입니다</h1>
+
+                <div style="border: solid 2px black; width: 270px; height: 60px; ">
+
+                    <div style="display: inline-block;">
+
+                        <div style="display:table-cell; vertical-align: middle;line-height: 30px;">
+
+                            <div>
+                                <label style="min-width:65px;padding-left: 5px;">사용자 :</label>
+                                <input type="text" />
+                            </div>
+        
+                            <div>
+                                <label style="min-width:65px;padding-left: 5px;">비밀번호 :</label>
+                                <input type="text" />
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    
+                    <div style="display:inline-block;">
+
+                            <div style="display:table-cell; vertical-align: middle;line-height: 60px;">
+                                <button>전송</button>
+                            </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div>
+            <h1>HTML 입력 양식 실습2</h1>
+            <p>체크박스와 라디오 버튼 및 텍스트를 이용하여 아래 설문조사를 만드세요</p>
+            <p>각각의 항목 앞에 1,2,3과 같은 순서 추가</p>
+
+            <div>
+                <h2>설문조사</h2>
+
+                <ol>
+                    <div>
+                        <li>성별을 체크해주세요</li>
+
+                        <div>
+                            <input type="radio" name="gender" value="male" />남
+                            <input type="radio" name="gender" value="female" />여
+                        </div>
+                    </div>
+
+                    <div>
+                        <li>음식을 선택해주세요</li>
+
+                        <input type="checkbox" name="food" value="한식" />한식 <br />
+                        <input type="checkbox" name="food" value="일식" />일식 <br />
+                        <input type="checkbox" name="food" value="중식" />중식 <br />
+                        <input type="checkbox" name="food" value="양식" />양식
+                    </div>
+
+                    <div>
+                        <li>기타의견을 남겨주세요</li>
+
+                        <textarea style="width:300px;" class="textarea" rows="6"></textarea>
+                    </div>
+                </ol>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

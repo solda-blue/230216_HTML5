@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/index.css" rel="stylesheet" />
+    <title>htmlBasicElement</title>
+</head>
+
+<body>
+    <div class="container">
+    
+        <div style="background-image: url('../img/가가가.png');">
+
+            <br />
+            <a href="#링크">링크 위치로 이동</a>
+
+            <h1>
+                <a name="style">style 속성 확인</a> 
+            </h1>
+
+            <p style="color:blue;">색상을 파란색으로 바꿨습니다</p>
+            <p style="color: rgb(255, 0, 0)">rgb컬러로 바꿨습니다</p>
+            <p style="color: #6666cc;">16진수로 사용된 컬러값입니다</p>
+            <p>스타일이 적용되지 않습니다</p>
+            <p style="background-color: yellow;">배경색을 추가합니다</p>
+
+            <p 
+            style="color: blue; background-color: yellow;"
+            > 배경과 글자색을 변경
+            </p>
+
+        </div>
+
+        <hr />
+
+        <div>
+            <h1>
+                <a name="링크">링크</a>
+            </h1>
+
+            <a href="https://www.naver.com">네이버</a>
+            <a href="../html/htmlText.html">HTML 텍스트 파일</a>
+            <a href="../img/가가가.png" target="_blank" title="새창">이미지 새창</a> 
+            <a href="../img/링크.png" target="_blank" title="새창">target 링크</a> 
+            <a href="./aaa.txt">방문하지 않은 링크</a>
+            
+            <p>
+                외부의 웹 사이트나 같은 위치 또는 폴더에 있는 파일을 연결할 수 있다
+            </p>
+
+            <p>
+                a태그를 통해서 책갈피를 만들 수 있다 <br />
+                클릭할 링크 : href="#" 속성을 가짐 <br />
+                이동되는 위치의 링크 : name="" 속성을 가짐
+            </p>
+
+            <a href="#style">스타일위치로 이동</a>
+
+        </div>
+
+        <hr />
+
+        <div>
+            <h1>
+                <a name="image">이미지</a>
+            </h1>
+
+            <img src="../img/가가가.png" alt="그림입니다" width="100px" />
+
+            <p>
+                img 태그는 파일의 위치를 적어서 불러온다 <br />
+                파일의 위치 : ./ > 현재 폴더위치에서 찾기 <br />
+                현재 폴더위치 : 지금 작성하고 있는 파일이 있는 폴더
+            </p>
+
+        </div>
+
+        <hr />
+
+        <div>
+            <h1>
+                <a name="list">리스트</a>
+            </h1>
+
+            <!-- ul 순서가 없는 리스트 -->
+            <ul>
+                <!-- 각각의 리스트는 li로 표현 -->
+                <li>순서가 없는 리스트</li>
+                <li>순서가 없는 리스트</li>
+                <li>순서가 없는 리스트</li>
+            </ul>
+
+            <!-- ol 순서가 있는 리스트 -->
+            <ol>
+                <li>순서가 있는 리스트</li>
+                <li>순서가 있는 리스트</li>
+                <li>순서가 있는 리스트</li>
+            </ol>
+
+            <!-- dl 정의 리스트 -->
+
+            <dl>
+                <!-- dl정의 제목(title) -->
+                <dt>HTML</dt>
+
+                <!-- dd 정의 정보(data) -->
+                <dd>하이퍼텍스트 마크업 언어</dd>
+                <dd>하이퍼텍스트 마크업 언어</dd>
+
+                <dt>링크</dt>
+
+                <dd>하이퍼링크로 다른 페이지로 이동할 수 있다</dd>
+
+            </dl>
+
+        </div>
+
+        <hr />
+
+        <div>
+            <h1>
+                <a name="table">테이블 표</a>
+            </h1>
+
+            <table style="border : solid 1px black;">
+
+                <tr>
+                    <th colspan="1" style="border: solid 1px blue;">제목</th>
+                </tr>
+
+                <tr>
+                    <td style="border: solid 1px blue;">내용이 들어갑니다</td>
+                    <td rowspan="2">두번째 내용입니다</td>
+                </tr>
+
+                <tr>
+                    <td>세번째 내용입니다</td>
+                </tr>
+
+            </table>
+
+            <p>
+                테이블 태그는 tr로 열을 작성하고 td로 안에 셀을 만든다 <br />
+                tr : table row(행), td : table data(셀),
+                th : table header <br />
+                colspan : 오른쪽에 있는 셀을 확장 <br />
+                rowspan : 아래쪽에 있는 셀을 확장
+            </p>
+            
+
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
