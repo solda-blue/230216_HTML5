@@ -1,0 +1,23 @@
+.container {
+    padding: 20px;
+}
+.input-box {
+    margin: 10px;
+}
+.input-box label{
+    font-size: 13px;
+    display: inline-block;
+    width: 80px;
+}
+.input-text {
+    width: 200px;
+    height: 30px;
+    background-color: #F2F3F5;
+    border: 0;
+}
+.input-text:focus {
+    /* !important 안해도 동작함 */
+    outline: none;
+    border-color:#409EFF;
+    box-shadow: 0 0 10px #409EFF;
+}

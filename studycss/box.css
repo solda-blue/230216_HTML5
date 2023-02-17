@@ -1,0 +1,99 @@
+.text-size {
+    font-size: 300%;
+}
+.text-em {
+    font-size: 3em;
+}
+.text-in-em {
+    font-size: 0.5em;
+}
+.text-rem {
+    font-size: 2rem;
+}
+.text-in-rem {
+    font-size: 1rem;
+}
+
+.width {
+    border: solid 2px red;
+    max-width: 1000px;
+    min-width: 300px;
+}
+.height-box {
+    background-color: lightgrey;
+    height: 200px;
+}
+.height {
+    border: solid 2px blue;
+    /* max-height는 콘텐츠의 크기가 커질 때,
+    그 높이크기를 제한 할 수 있다
+    높이크기를 제한해도, 안에 콘텐츠는 빠져나옴*/
+    max-height: 20px;
+}
+.my-border {
+    border: solid 2px blue;
+}
+.my-p-top {padding-top: 10px;}
+.my-p-left {padding-left: 10px;}
+.my-p {padding: 10px;}
+/* padding애 위아래 값과 양 옆의 값을 각각 주고 싶을 때
+첫번째 값 : 위아래 / 두번째 값 : 양 옆의 값으로 들어간다 */
+.my-p-y {padding: 10px 30px;}
+.b-groove {
+    border-style: groove;
+    border-top-width: 3px;
+
+    border-left-style: groove;
+    border-left-width: 3px;
+}
+.b-ridge {
+    border-style: ridge;
+    border-top-width: 3px;
+
+    border-left-style: ridge;
+    border-left-width: 3px;
+}
+.b-inset {
+    border-style: inset;
+    border-top-width: 3px;
+
+    border-left-style: inset;
+    border-left-width: 3px;
+}
+.b-outset {
+    border-style: outset;
+    border-top-width: 3px;
+
+    border-left-style: outset;
+    border-left-width: 3px;
+}
+.b-none {
+    border: solid black 3px;
+    border-bottom-style: none;
+}
+.b-hidden {
+    border: solid black 3px;
+    border-top-color: transparent;
+    border-top-width: 5px;
+}
+.my-m-t {
+    margin-top: 20px;
+}
+.my-m-l {
+    margin-left: 30px;
+}
+.my-m-parent {
+    margin: inherit;
+}
+.my-m-auto {
+    margin: 0 auto;
+}
+.box-parent {
+    width: 1400px;
+}
+.box-layout {
+    box-sizing: content-box;
+    height: 30px;
+    padding: 2px;
+    border: solid 1px black;
+}
