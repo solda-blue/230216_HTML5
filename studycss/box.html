@@ -101,6 +101,31 @@
                 크기값이 중요한 경우에는 border-box로 바꿔서 작성 <br />
                 크기계산이 편하기 때문
             </p>
+            
+            <h2>마진값 - auto</h2>
+            <div class="my-border my-m-auto"
+                style="width:300px;"
+                >margin 속성값</div>
+            <p>
+                margin 속성값 auto 값을 사용해줄 때는 
+                display가 block 속성...
+            </p>
+
+            <h2>아웃라인 - outline</h2>
+            <p class="outline">아웃라인입니다</p>
+            <p>
+                outline은 border와 동일하게 사용할 수 있다
+                그려지는 위치도 동일하게 그려진다 <br />
+                단, 두께는 크기의 범위에 들어가지 않기 때문에 
+                계산할 필요가 없다
+            </p>
+            <p>
+                outline과 box-size에서 border-size로 작성했을 때
+                *outline을 사용하면 border값 계산 X
+                *box-size를 사용하면 padding과 content(height/width)를
+                따로 계산할 필요 없음 > content값만 계산
+                >> 요소의 크기 계산 : margin + content
+            </p>
     </div>
     
 </body>

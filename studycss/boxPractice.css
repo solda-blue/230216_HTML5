@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+}
+.box1 {
+    width: 1%;
+    background-color: darkorange;
+    height: 80px;
+    display:table-cell;
+    vertical-align:middle;
+    line-height: 60px;
+}
+.title {
+    text-align: center;
+}
+.box2 {
+    margin-top: 20px;
+    width: 100%;
+    border: dashed 3px;
+    border-radius: 15px;
+}
+.input-text {
+    width: 95%;
+    height: 30px;
+    background-color: #F2F3F5;
+    align-items: center;
+    border: 0;
+    margin: 10px;
+}

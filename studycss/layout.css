@@ -1,0 +1,55 @@
+.background-orange {
+    background-color: orange;
+}
+.inline-block {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+.hidden {
+    visibility: hidden;
+}
+.none {
+    display: none;
+}
+.opacity {
+    /* 1~100%, 0~1 숫자 */
+    opacity: 25%;
+    background-color: red;
+}
+.box {
+    color: white;
+    /* display: inline-block; */
+    width: 150px;
+    height: 150px;
+    background-color:cadetblue;
+}
+.position-s {
+    position: static;
+    /* 정적위치에서는 이동할 수 없다 */
+    left: 30px;
+    top: 30px;
+}
+.position-r {
+    /* 상대위치를 쓰겠다 알림 */
+    position: relative;
+    opacity: 0.25;
+    left: 30px;
+    top: 50px;
+}
+.box-parent {
+    height: 300px;
+}
+.position-f {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    /* opacity: 0.5; */
+    z-index: -1;
+}
+.position-a {
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    /* opacity: 0.5; */
+}
