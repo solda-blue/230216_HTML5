@@ -1,0 +1,74 @@
+.float-left {
+    float: left;
+}
+.float-clear {
+    clear: both;
+}
+.header {
+    background-color: coral;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2rem;
+}
+.nav {
+    background-color: yellowgreen;
+    text-align: center;
+    margin: 5px 0;
+}
+.main {
+    background-color: burlywood;
+    height: 50px;
+    padding: 5px;
+    /* height를 지정한 곳에서는 scroll이 생긴다 */
+    overflow: auto;
+}
+.section1, .section2 {
+    background-color: brown;
+    color: white;
+}
+.section1 {
+    float: left;
+    width: 100px;
+}
+.section2 {
+    margin-left: 110px;
+}
+
+.layout {
+    text-align: center;
+}
+.header-border {
+    border: 3px solid orange;
+    outline: 3px solid brown;
+}
+.nav-border {
+    border: 3px solid pink;
+    outline: 3px solid palevioletred;
+    float: left;
+    width: 200px;
+    height: 400px;
+}
+.section-border {
+    border: 3px solid lightblue;
+    outline: 3px solid blue;
+    height: 400px;
+}
+.footer-border {
+    border: 3px solid greenyellow;
+    outline: 3px solid green;
+}
+.float-right {
+    float: right;
+}
+.align-margin {
+    width: 150px;
+    margin: 0 auto;
+}
+.align-position {
+    position: absolute;
+    left: 50%;
+}
+.container {
+    background: tan;
+    overflow: auto;
+}

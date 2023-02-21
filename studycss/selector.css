@@ -1,0 +1,130 @@
+.outbox p {
+    background: yellow;
+}
+.outbox > p {
+    background: blue;
+}
+.sibling ~ p {
+    background: cadetblue;
+}
+/* +를 사용할 떄는 바로 뒤에 있는 태그만 찾을 수 있다 */
+.sibling + a {
+    background: aqua;
+}
+.sibling + p {
+    background: aqua;
+}
+.sibling ~ .test {
+    background: brown;
+}
+
+.input-focus:focus {
+    background: coral;
+}
+.input-focus:focus + p {
+    color: blue;
+}
+.state > input:checked+span {
+    color: grey;
+}
+.state > input:disabled + span {
+    text-decoration: line-through 1px solid;
+}
+.menu-list>li:first-child {
+    background: cornflowerblue;
+}
+.menu-list>li:last-child {
+    background: aquamarine;
+}
+.menu-list>li:nth-child(2n) {
+    color: brown;
+}
+.table-color tr > td:nth-child(2n) {
+    background: red;
+    border-collapse: collapse;
+}
+.table-color tr:first-child {
+    background-color: #fff;
+}
+
+.child-tag > p:first-child {
+    color: blue;
+}
+.child-tag > h1 {
+    color: brown;
+}
+p:first-of-type {
+    color : red;
+}
+
+/* 클래스를 지정하고 자손으로 타입찾기 */
+.of-type p:first-of-type {
+    color :red;
+}
+
+/* 클래스를 지정하고 자식으로 타입찾기 
+    first와 동일한 역할
+*/
+
+.first-letter:hover:first-letter {
+    color: blue;
+    font-size: 1.5rem;
+}
+.first-line::first-line {
+    background-color: yellow;
+}
+.before::before {
+    /* content를 넣어서 내용을 추가 */
+    /* 글자, url을 통해 이미지 추가 */
+    content : url("../img/react_original.svg");
+    /* inline-block을 넣어서 크기조절 */
+    display: inline-block;
+    width: 50px;
+}
+.befor-image::before {
+    content: "";
+    /* content로 크기 수정이 어려움 */
+    /* 크기 수정이 가능한 background-image로 추가 */
+    background-image: url("../img/naver.png");
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+.before-color::before {
+    content: "";
+    background-color: yellow;
+    /* content에 글자가 없을 때, inline-block사용 */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.after::after {
+    content: "추가";
+    background-color: yellow;
+    padding: 5px;
+}
+.after-color:hover:after {
+    content: "추가된 글자";
+    display: inline-block;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+}
+.attr>input[type="checkbox"]:checked+span {
+    color: crimson;
+}
+.attr>input[type="radio"]+span {
+    text-decoration: underline wavy;
+}
+.attr>input[type="button"] {
+    background: #000;
+    color: #fff;
+}
+.attr>input[type="radio"][value="group"] {
+    /* 두개 이상의 속성이름과 송성값을 가진 태그를 찾을 수 있다 */
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./floatLayout.css" />
+    <title>float 레이아웃</title>
+</head>
+<body>
+        <h1>float를 이용한 레이아웃</h1>
+        <img class="float-left" src="../img/react_original.svg" width="200" alt="리액트" />
+        <p>Hello React!</p>
+        <p>float를 이용하여 영향을 받는 태그입니다</p>
+        <p>
+            float 속성의 특징 <br />
+            주변 태그들이 float속성이 들어간 태그와 어울리도록 위치가 바뀐다 <br />
+            float:left를 넣었을 때, 들어간 요소는 왼쪽 <br />
+            어울리는 요소(주변태그)는 오른쪽에 배치가 된다
+        </p>
+        <p class="float-clear">영향을 받지 않는 태그입니다</p>
+        <p>
+            float는 형제 태그에 영향을 주기 때문에 
+            그 영향에서 벗어나기 위해서는 clear:both를 사용한다
+        </p>
+        <hr />
+        <h2>div/의미태그와 float를 이용한 레이아웃</h2>
+        <header class="header">제목작성</header>
+        <nav class="nav">네브 링크 작성</nav>
+        <main class="main">
+            <section class="section1">내용1</section>
+            <section class="section2">내용2</section>
+            <p>
+                float로 레이아웃 작성 <br />
+                float 속성이 들어가는 요소에만 width크기 지정 <br />
+                주변 요소의 크기는 자동으로 들어감. 
+                주변 요소의 간격을 띄울 때는 margin을 사용한다
+            </p>
+        </main>
+        <footer class="footer">푸터입니다</footer>
+        <hr />
+        <h2>레이아웃 잡기</h2>
+        <div class="layout">
+            <header class="header-border">
+                <h1>header 영역</h1>
+            </header>
+            <nav class="nav-border">
+                <h1>nav 영역</h1>
+                <p style="text-align: left;">
+                    여기에는 보통 메뉴가 들어갑니다
+                </p>
+            </nav>
+            <section class="section-border">
+                <h1>section 영역</h1>
+                    <p style="text-align: left;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            </section>
+            <footer class="footer-border">
+                <h1>footer 영역</h1>
+            </footer>
+        </div>
+        <hr />
+        <img class="float-left" src="../img/naver.png" width="250" />
+        <img class="float-right" src="../img/react_original.svg" width="250" />
+        <a href="">인라인 태그</a>
+        <p>오른쪽으로 정렬할 수 있다</p>
+        <p class="float-clear">
+            float를 이용하여 오른쪽 왼쪽을 고정해서 사용할 수도 있다
+        </p>
+
+        <hr />
+
+        <h1>정렬하는 방법</h1>
+        <div class="align-margin">블록 타입 정렬</div>
+        <div class="align-position">포지션 정렬</div>
+
+        <h1>이미지와 함께 쓰는 float</h1>
+        <div class="container">
+            <img class="float-left" src="../img/bono.jpeg" width="150" />
+            <p>연필입니다</p>
+        </div>
+        <p>
+            float와 div 컨테이너를 사용할 때, 이미지를 함께 사용한다면 <br />
+            overflow:auto를 사용해서 내용을 다 감쌀 수 있도록 할 수 있다
+        </p>
+</body>
+</html>

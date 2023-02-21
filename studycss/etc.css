@@ -1,0 +1,114 @@
+@import url("./selector.css");
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    background-image: url("../img/naver.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+}
+
+.font {
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+}
+
+.gradient {
+    height: 50px;
+    background: 
+    -webkit-linear-gradient(right, green, yellow, #fff);
+}
+.gradient2 {
+    height: 50px;
+    background: 
+    -webkit-linear-gradient(90deg, rgba(0,225,0, 0.5), yellow, #ffffffc6);
+}
+
+body {
+    background: 
+    -webkit-linear-gradient(90deg, #00000000,#ffffff00)
+}
+
+.gradient-circle {
+    width: 150px;
+    height: 150px;
+    background: 
+    -webkit-radial-gradient(red 30%, rgba(255, 255, 255, 0) 50%);
+}
+
+.gradient-circle2 {
+    width: 150px;
+    height: 150px;
+    background: 
+    -webkit-radial-gradient(closest-side,red, orange, yellow, green, blue, indigo, purple);
+}
+
+.box-shadow {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    box-shadow: -3px 3px 5px #fff;
+}
+
+.background {
+    background-image: url("../img/naver.png"),url("../img/naver.png");
+    width: 600px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background2 {
+    width: 600px;
+    height: 300px;
+    border: #fff 10px solid;
+    padding: 30px;
+    background-image: url("../img/naver.png");
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+.background3 {
+    background-image: url("../img/naver.png");
+    font-size: 2rem;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.border-image {
+    border : 36px solida orange;
+    border-image: url("../img/naver.png") 30 / 19px round;
+}
+
+.text {
+    background-color: yellowgreen;
+    height: 70px;
+    word-break: keep-all;
+    /* 각콘텐츠의 값이 넘쳤을때 어떻게 보일지*/
+    overflow: hidden;
+    /* 글자가 자동줄 바꿈이 있는지 확인*/
+    white-space: nowrap;
+    /* 글자가 그 크기를 넘어갔을때 모습 정함*/
+    text-overflow: ellipsis;
+}
+
+.text-kr {
+    background-color: yellow;
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./selector.css" />
+    <title>선택자</title>
+</head>
+<body>
+    <h1>CSS 선택자</h1>
+    <p>
+        각각의 태그에 하나의 선택자, 하나의 클래스로 접근하는데 한계가 있음 <br />
+        두개 이상의 선택자를 사용해서 원하는 태그에 접근
+    </p>
+    <h2>결합 선택자</h2>
+    <h3>자손 선택자와 자식 선택자</h3>
+    <div class="outbox">
+        <p>div outbox의 자식인 p태그</p>
+        <div class="inbox">
+            <p>div outbox의 자손인 p태그</p>
+        </div>
+        <p>div outbox의 자식인 p태그</p>
+    </div>
+    <h3>동위/형제 선택자</h3>
+    <div>
+        <p class="sibling">p 형제를 선택합니다</p>
+        <p>p의 p태그 형제</p>
+        <a href="">p의 a태그 형제</a>
+        <p>p의 p태그 형제</p>
+    </div>
+    <div>
+        <p>부모가 다르기 때문에 형제가 아니다</p>
+    </div>
+
+    <p>
+        부모, 자식, 형제 관계를 통해서 태그에 접근할 수 있다 <br />
+        이때, 더 좁은 범위의 css가 적용이 되게 된다 <br />
+        .test        : 모든 test클래스를 가진 태그 <br />
+        .sibling ~ p : 모든 sibling 클래스를 가진 태그의 형제 중 p태그 <br />
+        아래의 경우가 더 좁다
+    </p>
+
+    <h3>동적 의사클래스</h3>
+    <p>
+        :link, :visited, :hover, :active, :focus
+        와 같은 상태에 따른 css디자인을 따로 넣어줄 수 있다
+    </p>
+    <label>
+        아래 input 태그에 focus를 주면 백그라운드 색이 바뀐다
+    </label>
+    <input class="input-focus" type="text" />
+    <p>input 태그에 포커스를 주면 p태그의 글자색이 바뀝니다</p>
+
+    <h3>상태의사 클래스</h3>
+    <div class="state">
+        <input type="checkbox" checked />
+        <span>위 내용을 숙지하셨습니까?</span> <br />
+        <input type="checkbox" />
+        <span>한번 더 확인해주세요</span>
+    </div>
+    <div class="state">
+        <input type="checkbox" disabled>
+        <span>확인</span>
+    </div>
+    <p>
+        클래스 이름은 필요에 따라서 사용할 수 있고
+        동일한 디자인을 계속 쓰고 싶다면 같은 클래스를 사용한다
+    </p>
+
+    <h3>구조의사 클래스</h3>
+    <ul class="menu-list">
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+        <li>네번째</li>
+    </ul>
+    <p>
+        리스트나 테이블과 같이 자식을 가지는 태그에서
+        특정 자식을 선택해야 할 때 사용한다 <br />
+        :nth-child(2) : 2번째 자식 태그에 디자인을 준다 <br />
+        :nth-child(2n) : 짝수번째 자식 태그에 디자인을 준다
+    </p>
+
+    <p>짝수번째 색상을 노란색으로 바꾸세요</p>
+    <table class="table-color" border="1">
+        <tr>
+            <td>첫번째</td>
+        </tr>
+        <tr>
+            <td>두번째</td>
+        </tr>
+        <tr>
+            <td>세번째</td>
+        </tr>
+        <tr>
+            <td>네번째</td>
+        </tr>
+    </table>
+
+    <h3>of-type</h3>
+    <p>속성 중에서 순서를 찾아서 작성</p>
+    <div class="child-tag">
+        <p>div의 자식</p>
+        <h1>div의 자식</h1>
+        <h2>div의 자식</h2>
+    </div>
+
+    <div class="of-type">
+        <p>각 부모의 최초의 요소에 디자인이 들어간다</p>
+        <p>두번째 요소에는 들어가지 않는다</p>
+        <div>
+            <p>최초의 요소</p>
+        </div>
+    </div>
+
+    <h2>HTML요소에 특정부분에 추가하는 선택자</h2>
+    <p class="first-letter">텍스트의 첫글자를 디자인 합니다</p>
+    <p class="first-line">
+        첫번째 줄을 디자인 합니다 <br />
+        줄이 바뀐 곳은 바뀌지 않습니다
+    </p>
+
+    <h2>HTML 요소 앞과 뒤에 새로운 요소를 추가하는 선택자</h2>
+    <p class="before">
+        p태그 앞에 내용이 들어갑니다
+    </p>
+
+    <p class="before-image">
+        p태그 앞에 이미지가 들어갑니다 <br />
+        svg이미지 : 벡터이미지 (크기제한 X) <br />
+        png/jpg/gif : 픽셀이미지 (크기제한 O)
+    </p>
+
+    <p class="before-color">
+        p태그 앞에 색상을 넣을 때
+    </p>
+    
+    <p class="after">
+        p태그 뒤에 작성
+    </p>
+    <p class="after-color">
+        p태그에 색상
+    </p>
+    
+    <h2>속성 선택자</h2>
+    <div class="attr">
+        <input type="checkbox" /> <span>선택</span>
+        <input type="radio" name="group" /> <span>네</span>
+        <input type="radio" name="group" /> <span>아니오</span>
+        <input type="button" value="제출" />
+    </div>
+
+    <hr />
+    <h1>손택자를 이용한 태그 작성</h1>
+    <p>
+        HTML에서 태그 이름을 적으면 관련 태그가 자동 완성 되는 것을 emmet이라고 한다 <br />
+        emmet으로 작성하는 태그는 선택자 형식으로 작성하면 자동완성이 된다
+    </p>
+
+</body>
+</html>

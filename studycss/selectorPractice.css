@@ -1,0 +1,39 @@
+.box1 {
+    border: 2px solid red;
+}
+a {
+    text-decoration: none;
+}
+.box1 span {
+    margin-left: 30px;
+}
+.box2 {
+    float: right;
+}
+.btn {
+    margin: 12px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.btn span {
+    margin: 0 5px;
+}
+.box3>p::after {
+    content: url("../img/react_original.svg");
+    display: inline-block;
+    width: 25px;
+}
+.box3>p::before {
+    content: "";
+    background-image: url("../img/naver.png");
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-size: cover;
+}
+
+

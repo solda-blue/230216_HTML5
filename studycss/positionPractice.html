@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./positionPractice.css" />
+    <title>CSS 위치 속성 실습</title>
+</head>
+<body>
+    <h1>위치속성 실습 1</h1>
+    <div>
+        <div id="content">
+            <h2>내용이 긴 홈페이지</h2>
+        </div>
+        <div class="nav">
+            바로가기
+            <div style="text-align: center;">
+                <p class="btn" id="upBtn" onclick="handleScroll('up')">맨 위로</p>
+                <p class="btn" id="downBtn" onclick="handleScroll('down')">맨 아래로</p>
+            </div>
+        </div>
+    </div>
+
+    <h1>위치속성 실습2</h1>
+    <div class="box">
+        <div style="padding-left:20px;">
+            <div class="menu">메일</div>
+            <div class="menu">블로그</div>
+            <div class="menu">지식인</div>
+            <div class="menu">뉴스</div>
+        </div>
+    </div>
+
+    <script>
+        let content = document.getElementById('content');
+        for (let i = 0; i < 30; i++) {
+            content.innerHTML += "<p>문단을 늘리기 위한 p태그입니다 10번 복사해서 씁니다</p>"
+        }
+
+        function scrollTo(element, dir) {
+            if(dir == "up") {
+                dir = element.offsetTop;
+            } else {
+                dir = element.offsetHeight;
+            }
+            window.scroll({
+                behavior : 'smooth',
+                left : 0,
+                top : dir
+            });
+        }
+        const body = document.getElementsByTagName("body");
+        function handleScroll(dir) {
+            scrollTo(body[0], dir);
+        }
+
+    </script>
+    
+</body>
+</html>
